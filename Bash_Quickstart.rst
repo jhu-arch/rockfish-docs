@@ -14,6 +14,7 @@ When you connect to Rockfish, your shell session is initialized based on whether
 To ensure consistent behavior across environments, your `.bash_profile` should source `.bashrc`. This is already set by default for Rockfish users:
 
 .. code-block:: bash
+
    if [ -f ~/.bashrc ]; then
        source ~/.bashrc
    fi
@@ -27,6 +28,7 @@ Protecting Your $PATH
 When adding directories to your `PATH`, avoid doing so repeatedly in nested shells by using a guard variable:
 
 .. code-block:: bash
+
    if [ -z "$ROCKFISH_ENV" ]; then
        export ROCKFISH_ENV=1
        export PATH="$HOME/bin:$PATH"
@@ -40,6 +42,7 @@ Aliases: Quick Commands
 **Aliases** are shorthand for longer commands, helping you work more efficiently. For example:
 
 .. code-block:: bash
+
    alias ll='ls -lFh'
    alias usage='quotas.py'
    alias la='ls -a'
@@ -53,6 +56,7 @@ Helpful Customizations
 Other useful customizations — like loading modules or setting environment variables — should also go in `~/.bashrc`. For example:
 
 .. code-block:: bash
+   
    module load intel/2020.2
    module load gcc/11.2.0
 
