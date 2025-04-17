@@ -25,7 +25,7 @@ Use ``rsync`` for efficient file syncing:
    - ``--exclude-from`` uses a file to skip listed files
 
 Data Transfer with Globus
-======================
+=========================
 
 
 The recommended method for transferring large data files to and from the Rockfish cluster is to use `Globus <https://www.globus.org>`_. Globus manages transfers reliably in the background, handling restarts if interruptions occur.
@@ -40,7 +40,7 @@ Use your browser to visit: https://www.globus.org
    :alt: Globus Login
 
 2. Search for Johns Hopkins
-**************************
+***************************
 
 Search and select **“Johns Hopkins”** as your institution.
 
@@ -56,7 +56,7 @@ Use your JHED ID to log in through the Johns Hopkins SSO portal.
    :width: 400
 
 4. Search for the Rockfish Collection
-**************************
+**************************************
 
 After logging in, search for the collection **“rockfish”** in the Collection Search screen. Click on **“Rockfish User Data”** when it appears.
 
@@ -74,7 +74,7 @@ Click **“Continue”**.
    :width: 400
 
 6. Select Your JHED Identity
-**************************
+******************************
 
 Choose your JHED ID from the list of available identities.
 
@@ -82,7 +82,7 @@ Choose your JHED ID from the list of available identities.
    :width: 400
 
 7. Allow Access to the Globus Web App
-**************************
+**************************************
 
 Scroll to the bottom and click **“Allow”** to authorize access.
 
@@ -98,7 +98,7 @@ Once authorized, you will see the Rockfish endpoint connected (your HOME directo
    :width: 400
 
 9. Choose a Second Endpoint
-**************************
+***************************
 
 On the other side of the interface, select a second endpoint. This could be:
 - A Globus Connect Personal instance (e.g., your laptop)
@@ -108,7 +108,7 @@ On the other side of the interface, select a second endpoint. This could be:
    :width: 400
 
 10. Authentication for Second Endpoint (if needed)
-**************************
+**************************************************
 
 You may be asked to authenticate to the second system. If using your own Globus Connect Personal setup, you might not need additional authentication.
 
