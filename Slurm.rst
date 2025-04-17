@@ -198,7 +198,7 @@ Display your jobs:
    sqme
 
 Example Batch Script
-=====================
+*********************
 
 .. code-block:: bash
 
