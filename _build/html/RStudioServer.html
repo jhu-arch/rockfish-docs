@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RStudio Server &mdash; Rockfish Cluster Software Guide 2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="JupyterLab" href="JupyterLab.html" />
+    <link rel="prev" title="Linux Commands" href="Linux.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/arch.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About ARCH</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About_ARCH.html">About ARCH</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources on Rockfish</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_Terminology.html">ARCH Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Allocation.html">Allocation and Account Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Compute_Resources.html">Compute Node Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filesystems.html">Filesystems on Rockfish</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Connect and Transfer to Rockfish</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Connecting_to_Rockfish.html">Logging in to Rockfish</a></li>
+<li class="toctree-l1"><a class="reference internal" href="File_Transfers.html">File Transfers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manage Software and Jobs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Slurm.html">Job Scheduling with Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Managing Softwares using Lmod</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common Tasks and Workflows</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="OpenOnDemand.html">Open OnDemand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RStudio Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="JupyterLab.html">JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Parallel.html">Parallel Computing Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rpackages.html">Using R on the Rockfish</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to do Reproducible Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="RF.html">Reproducibility Framework (RF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Snakemake.html">Snakemake Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Singularity.html">Singularity container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual.html">Virtual Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Shorts.html">Short Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Bash_Quickstart.html">Bash Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Managing_Group_Permissions.html">Manage Group Permissions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support and Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Service_Level_Expectations.html">Service Level Expectations</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rockfish Cluster Software Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RStudio Server</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/RStudioServer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rstudio-server">
+<h1>RStudio Server<a class="headerlink" href="#rstudio-server" title="Permalink to this heading"></a></h1>
+<p>The open-source RStudio Server provides a fully-featured IDE for R users.</p>
+<p>The ARCH users can access the RStudio Server on Rockfish using the <code class="docutils literal notranslate"><span class="pre">r-studio-server.sh</span></code> command. It will create a Slurm script to run on the system.</p>
+<p>Usage examples to start the RStudio service:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>r-studio-server.sh<span class="w"> </span>-h
+<span class="gp">$ </span>r-studio-server.sh<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-m<span class="w"> </span>8G<span class="w"> </span>-t<span class="w"> </span><span class="m">1</span>-02:0<span class="w"> </span>-p<span class="w"> </span>defq<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<span class="gp">$ </span>r-studio-server.sh<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span><span class="m">4</span>:0:0<span class="w"> </span>-p<span class="w"> </span>defq<span class="w"> </span>-e<span class="w"> </span>&lt;userid&gt;@jhu.edu
+<span class="gp">$ </span>r-studio-server.sh<span class="w"> </span>-c<span class="w"> </span><span class="m">24</span><span class="w"> </span>-g<span class="w"> </span><span class="m">2</span><span class="w"> </span>-p<span class="w"> </span>a100<span class="w"> </span>-a<span class="w"> </span>&lt;PI-userid&gt;_gpu
+</pre></div>
+</div>
+<p>Executing the <code class="docutils literal notranslate"><span class="pre">r-studio-server.sh</span></code> you will a script called <code class="docutils literal notranslate"><span class="pre">R-Studio-Server.slurm.script</span></code> it looks like this code-block below.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Creating slurm script: R-Studio-Server.slurm.script</span>
+
+<span class="go">The Advanced Research Computing at Hopkins (ARCH)</span>
+<span class="go">SLURM job script for run RStudio into Singularity container</span>
+<span class="go">Support:  help@rockfish.jhu.edu</span>
+
+<span class="go">Nodes:        2</span>
+<span class="go">Cores/task:   4</span>
+<span class="go">Total cores:  8</span>
+<span class="go">Walltime:     00-02:00</span>
+<span class="go">Queue:        defq</span>
+
+<span class="go">The R-Studio-Server is ready to run.</span>
+
+<span class="go">1 - Usage:</span>
+
+<span class="gp">       $ </span>sbatch<span class="w"> </span>R-Studio-Server.slurm.script
+
+<span class="go">2 - How to login see login file (after step 1):</span>
+
+<span class="gp">       $ </span>cat<span class="w"> </span>rstudio-server.job.&lt;SLURM_JOB_ID&gt;.out
+
+<span class="go">3 - More information about the job (after step 1):</span>
+
+<span class="gp">       $ </span>scontrol<span class="w"> </span>show<span class="w"> </span>jobid<span class="w"> </span>&lt;SLURM_JOB_ID&gt;
+</pre></div>
+</div>
+<p>Example the R-Studio-Server.slurm.script created by this syntax <code class="docutils literal notranslate"><span class="pre">r-studio-server.sh</span> <span class="pre">-n</span> <span class="pre">1</span> <span class="pre">-c</span> <span class="pre">2</span> <span class="pre">-m</span> <span class="pre">8G</span> <span class="pre">-t</span> <span class="pre">1-02:0</span> <span class="pre">-p</span> <span class="pre">defq</span></code> command.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> tags can be customized.
+Also, there is an R environment session in the R-Studio-Server.slurm.script which the user can change to run it using another R, instead of inside the container (R 4.0.4).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To run the R-Studio-Server.slurm.script properly. Please, make sure you don’t have the anaconda module loaded when you submit it.</p>
+<p>You should disable it <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">module</span> <span class="pre">unload</span> <span class="pre">anaconda</span></code>.</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#####################################</span>
+<span class="c1">#SBATCH --job-name=rstudio_container_rdesouz4</span>
+<span class="c1">#SBATCH --time=1-02:0</span>
+<span class="c1">#SBATCH --partition=defq</span>
+<span class="c1">#SBATCH --signal=USR2</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --cpus-per-task=2</span>
+<span class="c1">#SBATCH --mem=8G</span>
+<span class="c1">#SBATCH --mail-type=END,FAIL</span>
+<span class="c1">#SBATCH --mail-user=rdesouz4@jh.edu</span>
+<span class="c1">#SBATCH --output=rstudio-server.job.%j.out</span>
+<span class="c1">#####################################</span>
+
+<span class="c1"># ---------------------------------------------------</span>
+<span class="c1">#  R environment</span>
+<span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># This session is to run this script using another R instead of inside the container (R 4.0.4).</span>
+
+<span class="c1">#  There are two ways to run it:</span>
+<span class="c1">#</span>
+<span class="c1">#     METHOD 1: Using an R via the system module</span>
+
+<span class="c1"># Uncomment this Line</span>
+<span class="c1"># module load r/3.6.3</span>
+
+<span class="c1">#     METHOD 2: Using an R installed in a custom virtual environment, in this case using conda.</span>
+<span class="c1">#</span>
+<span class="c1">#     How to install an R version 3.6.6 using conda env</span>
+<span class="c1">#     $ module load anaconda &amp;&amp; conda create -n r_3.6.3 -c conda-forge r-base=3.6.3 libuuid &amp;&amp; module unload anaconda</span>
+<span class="c1">#     How to remove conda envs</span>
+<span class="c1">#     $ conda remove --name r_3.6.3 --all</span>
+
+<span class="c1">#</span>
+<span class="c1"># Uncomment these two instructions</span>
+<span class="c1"># module load anaconda &amp;&amp; conda activate r_3.6.3 &amp;&amp; export VIRT_ENV=$CONDA_PREFIX &amp;&amp; module unload anaconda</span>
+<span class="c1"># export R_HOME=${VIRT_ENV}/lib/R</span>
+
+<span class="c1">#   -- THIS LINE IS REQUIRED FOR BOTH METHODS --</span>
+<span class="c1">#</span>
+<span class="c1"># Uncomment this instruction</span>
+<span class="c1"># export SINGULARITY_BIND=${R_HOME}:/usr/local/lib/R</span>
+
+<span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># R_LIBS_USER directives for multiple environments</span>
+<span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Change the MY_LIBS variable to use the libraries related with your project.</span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">MY_LIBS</span><span class="o">=</span><span class="m">4</span>.0.4
+<span class="nb">export</span><span class="w"> </span><span class="nv">R_LIBS_USER</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/R/<span class="si">${</span><span class="nv">MY_LIBS</span><span class="si">}</span>
+
+<span class="c1"># ---------------------------------------------------</span>
+<span class="c1">#  Singularity environment variables</span>
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="c1"># -- SHOULDN&#39;T BE NECESSARY TO CHANGE ANYTHING BELOW THIS --</span>
+
+<span class="nb">source</span><span class="w"> </span>.r-studio-variables
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITYENV_LDAP_HOST</span><span class="o">=</span>ldapserver
+<span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITYENV_LDAP_USER_DN</span><span class="o">=</span><span class="s1">&#39;uid=%s,dc=cm,dc=cluster&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITYENV_LDAP_CERT_FILE</span><span class="o">=</span>/etc/rstudio/ca.pem
+
+cat<span class="w"> </span><span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="w"> </span><span class="s">&lt;&lt;END</span>
+
+<span class="s">1. SSH tunnel from your workstation using the following command:</span>
+
+<span class="s">ssh -N -L ${PORT}:${HOSTNAME}:${PORT} ${SINGULARITYENV_USER}@login.rockfish.jhu.edu</span>
+
+<span class="s">2. log in to RStudio Server in your web browser using the Rockfish cluster credentials (username and password) at:</span>
+
+<span class="s">http://localhost:${PORT}</span>
+
+<span class="s">user: ${SINGULARITYENV_USER}</span>
+<span class="s">password: &lt; Rochkfish password &gt;</span>
+
+<span class="s">3. When done using RStudio Server, terminate the job by:</span>
+
+<span class="s">a. Exit the RStudio Session (&quot;power&quot; button in the top right corner of the RStudio window)</span>
+<span class="s">b. Issue the following command on the login node:</span>
+
+<span class="s">scancel -f ${SLURM_JOB_ID}</span>
+<span class="s">END</span>
+
+singularity<span class="w"> </span>run<span class="w"> </span><span class="si">${</span><span class="nv">SINGULARITY_CONTAINER</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+rserver<span class="w"> </span>--www-port<span class="w"> </span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="w"> </span>--www-address<span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--auth-none<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--auth-pam-helper-path<span class="o">=</span>ldap_auth<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--rsession-path<span class="o">=</span>/etc/rstudio/rsession.sh
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Linux.html" class="btn btn-neutral float-left" title="Linux Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="JupyterLab.html" class="btn btn-neutral float-right" title="JupyterLab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, How-to on the Rockfish Cluster.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
