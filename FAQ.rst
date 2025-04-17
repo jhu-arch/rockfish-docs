@@ -7,8 +7,9 @@ Frequently Asked Questions
 
 .. dropdown:: What type of data can I upload to Rockfish?
 
-   Rockfish is not approved for HIPAA/PHI data.  
-   De-identified IRB data may be allowed — contact help@rockfish.jhu.edu for confirmation.
+   Data subject to restrictions such as HIPAA or PHI is **not permitted** on Rockfish.  
+   If your research involves an IRB and the data is de-identified, please reach out to  
+   `help@rockfish.jhu.edu <mailto:help@rockfish.jhu.edu>`__ for further guidance.
 
 .. dropdown:: How do I connect to Rockfish?
 
@@ -20,9 +21,10 @@ Frequently Asked Questions
 
 .. dropdown:: What default resources do I receive?
 
-   - 50GB `/home/` directory (backed up weekly)
+   - 50GB `/home/` directory
    - 10TB group allocation on `/data/`
-   - Scratch access available upon request
+   - 1TB group allocation on `/scratch4/`
+   - /scratch16/ access available upon request
 
 .. dropdown:: How do I request an allocation?
 
@@ -63,11 +65,13 @@ Frequently Asked Questions
 
 .. dropdown:: How do I check job efficiency?
 
-   Use `seff` after your job completes:
+   Use `seff`, `reportseff`, or `jobstats` after your job completes:
 
    .. code-block:: console
 
       seff <job_id>
+      reportseff <job_id>
+      jobstats <job_id>
 
 .. dropdown:: How do I transfer large datasets?
 

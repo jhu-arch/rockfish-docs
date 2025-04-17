@@ -1,46 +1,56 @@
 Open OnDemand
 ##############
 
-HELP
-****
-
-e-mail to help@rockfish.jhu.edu (ticketing system)
-
 Open OnDemand (`OOD`_) is an NSF-funded open-source HPC portal. It is a way for all our users to access the Rockfish cluster HPC resources via a web interface. It is a web-portal that provides a shell, file browser, and graphical interface for applications such as IGV, Matlab, ParaView, Jupyter and RStudio Server, etc.
 
 .. _OOD: https://portal.rockfish.jhu.edu
 
-A Rockfish account is necessary to use OOD. Also, a campus network connection or VPN is required to access the `OOD`_ portal.
+Access Requirements
+***********************
+- A valid **Rockfish account**
+- A connection to the **campus network or VPN**
+
+When you first navigate to `OOD`_ you will be presented with a login screen. You can use your JHED ID and password to log in.
 
 |ood1|
 
-Once authenticated, you will be on the main page.
+After logging in, you'll land on the main dashboard. The dashboard provides a listing of "Pinned Apps" that users can choose from.
 
 |ood2|
 
-|ood3|
+The top navigation bar includes:
 
-Along the top are a pull-down menus for an Apps, Files App, Jobs, shell, and a list of Interactive Apps.
-
-The file browser application provides a web-based file explorer that allows the user to remotely interact with the files on the Rockfish cluster’s local file system.
-You can drag and drop files, download entire directories, and also move files between directories
-all from within the web browser.
+- **Apps** – A listing of pinned applications.
+- **Files** – Upload, download, and manage files in your home directory.  
+- **Jobs** – View active jobs and the job composer tool.
+- **Clusters** – Shell access to Rockfish login nodes.
+- **Interactive Apps** – Launch graphical sessions
+- **My Interactive Sessions** – A listing of current sessions
 
 |ood4|
 
 Interactive Apps (Plugins)
 **************************
 
-Interactive Apps provide a means for a user to launch and connect to an interactive batch job running a local web server (called Interactive App sessions) through the OnDemand portal (e.g., Abaqus/CAE, RStudio, Jupyter Lab and Notebook, MATLAB, Linux remote desktops) on Rockfish cluster. They are considered Dashboard App Plugins and not Passenger apps such as the Dashboard App, Shell App, Files App, and etc.
+Interactive Apps allow users to start graphical or web-based sessions that run on compute nodes. These include:
+
+- Remote Desktop (Linux GUI)  
+- JupyterLab / Jupyter Notebook  
+- RStudio Server  
+- MATLAB  
+- IGV  
+- Abaqus/CAE  
+
+These apps run within batch jobs submitted to the cluster using Slurm.
 
 |ood5|
 
 Remote Desktop
 ****************
 
-Once in awhile, it is helpful to use a graphical interface to access data or certain programs. In this case, users have typically utilized VNC or X11 forwarding. Both of these tools have complications, either in complexity of setup or in performance. The Remote Desktop option from OOD simplifies the configuration of a VNC desktop session in a compute node.
+When a graphical interface is needed, OOD's Remote Desktop replaces complex tools like X11 forwarding or VNC setup.
 
-First request the desktop application, i.e. anything under Desktops or GUIs, which you would like to use. Here we choose the Desktop.
+First request the desktop application, i.e. anything under Interactive Apps, which you would like to use. Here we choose the Desktop.
 
 |ood6|
 
@@ -58,17 +68,18 @@ Once Slurm Scheduler is ready to use the requested resource, click Launch.
 |ood10|
 
 |ood11|
-So, if you have any problems starting this an app, look at Session ID: this case: (229e55a1-9808-4015-bb91-1ee36ffc3cc4), then open output.log file for more details.
+
+.. tip::
+  If the app doesn’t launch, check the Session ID and view the `output.log` for debugging.
+
 
 Jupyter Lab / Notebook
 **********************
 
 This app will launch a `Jupyter`_ on one or more nodes, creating an interactive session that users will be able to launch a Jupyter Server within a batch job in a compute node. They will then be able to connect to the running server through their browser and take advantage of the resources provided within the batch job.
-`GPU`_ specification is optional for the partitions that have them.
+GPU specification is optional for the partitions that have them.
 
 .. _Jupyter: https://jupyter.org/
-
-.. _GPU: https://www.arch.jhu.edu/user-guide/
 
 |ood12|
 
@@ -190,3 +201,8 @@ Bad Request
 .. |ood14| image:: images/ood14.png
   :alt: Jupyter
   :width: 100 %
+
+HELP
+****
+
+📧 `help@rockfish.jhu.edu <mailto:help@rockfish.jhu.edu>`__

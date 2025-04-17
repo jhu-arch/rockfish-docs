@@ -3,11 +3,7 @@ Job Scheduling with Slurm
 
 Rockfish uses **Slurm (Simple Linux Universal Resource Manager)** to manage job submission, scheduling, and resource allocation. It is a widely adopted, open-source workload manager used by many HPC centers.
 
-All jobs must be submitted through Slurm — running compute-heavy processes directly on login nodes is not permitted.
-
-.. contents::
-   :local:
-   :depth: 2
+All jobs must be submitted through Slurm — running compute-heavy processes directly on login nodes is not permitted
 
 Overview of Job Types
 *********************
@@ -19,47 +15,166 @@ Overview of Job Types
 Available Partitions
 *********************
 
-Slurm divides resources into **partitions** (similar to queues). Each partition targets specific hardware or workloads.
+Slurm divides resources into **partitions**, sometimes called **queues**. Each partition targets specific hardware or workloads.
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 15 15 15 20
+   :widths: 20 15 15 15 15 30
 
    * - Partition
      - Max Time (hrs)
      - Cores per Node
      - Max Memory
+     - GPUs
      - Use Case
+   * - express
+     - 8
+     - 4
+     - 8 GB
+     - —
+     - Short tests, debugging, interactive work (Jupyter, RStudio)
+   * - shared
+     - 36
+     - 32
+     - 4 GB/core
+     - —
+     - Small-scale workflows with shared node usage
    * - parallel
      - 72
      - 48
      - 192 GB
-     - General use
+     - —
+     - Dedicated nodes for large parallel jobs
    * - bigmem
      - 48
      - 48
      - 1.5 TB
-     - Large-memory jobs
+     - —
+     - Memory-intensive jobs with special allocation
    * - a100
      - 72
      - 48
      - 192 GB
-     - GPU jobs (A100)
+     - 4× A100 (40 GB)
+     - GPU workflows
    * - ica100
      - 72
      - 64
      - 256 GB
-     - GPU jobs
-   * - shared
+     - 4× A100 (80 GB)
+     - GPU workflows
+   * - mig_class
      - 24
      - 64
      - 256 GB
-     - Shared cores
-   * - express
-     - 8
-     - 128
+     - 12× MIGs (20 GB)
+     - Classroom GPU usage
+   * - l40s
+     - 24
+     - 64
      - 256 GB
-     - Short runs
+     - 8× L40s (48 GB)
+     - High-performance GPU workloads
+
+Partition Descriptions
+***********************
+
+express
+-------
+
+Express is designed for short-running jobs, including tests, debugging, or interactive sessions (e.g., Jupyter notebooks, RStudio).
+
+- **CPU Limit**: Up to 4 cores
+- **Memory Limit**: Up to 8 GB per job
+- **Node Sharing**: Yes (shared with other jobs)
+- **Max Runtime**: 8 hours
+
+shared
+------
+
+Shared is designed for a mixture of jobs, from single-core sequential jobs to small parallel jobs (less than 32 cores).
+
+- **Memory**: 4 GB per core
+- **Node Sharing**: Yes (shared with other jobs)
+- **Best For**: Smaller scale workflows
+- **Max Runtime**: 36 hours
+
+parallel
+--------
+
+Parallel is designed **only** for jobs requiring **48 cores or more**.
+
+- **Nodes**: Single or multiple (up to 75)
+- **Node Sharing**: No (dedicated)
+- **User Responsibility**: All cores must be utilized
+- **Max Runtime**: 3 days
+
+bigmem
+------
+
+Bigmem is designed for memory-intensive workflows.
+
+- **Memory**: 1.5 TB per node
+- **Requirements**:
+  
+  - Slurm allocation: ``<PI_NAME>_bigmem`` (e.g., ``jsmith123_bigmem``)
+  - QoS: ``qos_bigmem``
+
+- **Max Runtime**: 2 days
+
+a100
+----
+
+A100 is for GPU-enabled workflows.
+
+- **GPUs**: 4× NVIDIA A100 (40 GB each)
+- **Requirements**:
+
+  - Slurm allocation: ``<PI_NAME>_gpu`` (e.g., ``jsmith123_gpu``)
+  - QoS: ``qos_gpu``
+
+- **Max Runtime**: 3 days
+
+ica100
+------
+
+ICA100 is for GPU-enabled workflows using upgraded A100 cards.
+
+- **GPUs**: 4× NVIDIA A100 (80 GB each)
+- **Requirements**:
+
+  - Slurm allocation: ``<PI_NAME>_gpu`` (e.g., ``jsmith123_gpu``)
+  - QoS: ``qos_gpu``
+
+- **Max Runtime**: 3 days
+
+mig_class
+---------
+
+Mig_class is intended for classroom GPU workflows.
+
+- **GPUs**: 4× NVIDIA A100 (80 GB each), segmented into 12× 20 GB MIGs
+- **Requirements**:
+
+  - Slurm allocation: ``<class_name>-<PI_NAME>`` (e.g., ``cs601-jsmith123``)
+  - QoS: ``mig_class``
+
+- **Max Runtime**: 1 day
+
+l40s
+----
+
+L40s is designed for GPU workflows using L40s GPUs.
+
+- **GPUs**: 8× NVIDIA L40s (48 GB each)
+- **Requirements**:
+
+  - Slurm allocation: ``<PI_NAME>_gpu`` (e.g., ``jsmith123_gpu``)
+  - QoS: ``qos_gpu``
+
+- **Max Runtime**: 1 day
+
+
 
 Basic Job Submission
 *********************
@@ -149,23 +264,23 @@ Requesting Resources
 
    * - Option
      - Description
-   * - `--nodes=1`
+   * - ``--nodes=1``
      - Request 1 node
-   * - `--ntasks=24`
+   * - ``--ntasks=24``
      - Total MPI processes (tasks)
-   * - `--cpus-per-task=6`
+   * - ``--cpus-per-task=6``
      - Threads per task
-   * - `--mem=120GB`
+   * - ``--mem=120GB``
      - Memory per node
-   * - `--mem-per-cpu=4GB`
+   * - ``--mem-per-cpu=4GB``
      - Memory per CPU
-   * - `--exclusive`
+   * - ``--exclusive``
      - Use the entire node
-   * - `--shared`
+   * - ``--shared``
      - Share the node with others
-   * - `--account=myaccount`
+   * - ``--account=myaccount``
      - Specify a Slurm account
-   * - `--qos=qos_gpu`
+   * - ``--qos=qos_gpu``
      - Set quality-of-service
 
 GPU Jobs
@@ -220,14 +335,6 @@ Where:
 
 - `%j`: Job ID
 - `%x`: Job name
-
-Viewing Job Status & Efficiency
-*******************************
-
-- `squeue`: See current jobs in queue
-- `scontrol show job <id>`: View full job details
-- `seff <id>`: Show job efficiency
-- `jobstats <id>`: Get GPU usage statistics
 
 Useful Commands Summary
 ***********************

@@ -39,6 +39,7 @@ The Advanced Research Computing at Hopkins (  :guilabel:`ARCH` ) — formerly kn
    :caption: Manage Software and Jobs
 
    Slurm
+   Job_Status
    Software
 
 .. toctree::
