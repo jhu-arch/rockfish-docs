@@ -119,6 +119,7 @@ This all-flash storage is provided by **Krieger IT** for researchers who have pu
 - Mounted at `/vast/` on Rockfish
 - Available to all JHU researchers
 - Request form and pricing info:  
+
 📄 `Request VAST Storage & View Pricing <https://jh.qualtrics.com/jfe/form/SV_4SJJTnPMp8dHKwm>`__
 
 Quota Reporting with `quotas.py`
