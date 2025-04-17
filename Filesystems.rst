@@ -3,8 +3,6 @@ Filesystems on Rockfish
 
 Rockfish uses a combination of high-performance and research-tier file systems to support a wide range of workloads. Most storage is backed by IBM Spectrum Scale (GPFS), with additional storage from Krieger IT (VAST) for eligible researchers.
 
-Test
-
 Storage on Rockfish is intended solely for research and educational purposes. Users are expected to manage their data responsibly, and storage quotas are enforced per group.
 
 General Guidelines
@@ -15,6 +13,11 @@ General Guidelines
 - Storage increases are granted on a case-by-case basis, based on need and system capacity.
 - ARCH reserves the right to delete or move data as necessary to maintain system stability.
 - Temporary storage for large projects is available — please contact ARCH staff.
+
+.. important::
+  Data subject to restrictions such as HIPAA or PHI is **not permitted** on Rockfish.  
+  If your research involves an IRB and the data is de-identified, please reach out to  
+  `help@rockfish.jhu.edu <mailto:help@rockfish.jhu.edu>`__ for further guidance.
 
 
 Filesystems at a Glance
