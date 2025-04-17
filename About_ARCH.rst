@@ -23,8 +23,7 @@ ARCH offers a range of support services to enhance your computational research:
 
 - **Research planning and resource allocation strategy**
 - **Traditional HPC simulations** requiring large CPU, memory, and I/O
-- **Interactiv
-- **Parallel/scalable file systems** for improved data throughput
+- **Interactive**Parallel/scalable file systems** for improved data throughput
 - **Workflow design** and implementation for computational pipelines
 - **Scientific support** for emerging domains such as machine learning and AI
 - **Application support** including installation and tuning

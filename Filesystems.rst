@@ -14,6 +14,7 @@ General Guidelines
 - ARCH reserves the right to delete or move data as necessary to maintain system stability.
 - Temporary storage for large projects is available — please contact ARCH staff.
 
+
 Filesystems at a Glance
 ***********************
 
@@ -63,6 +64,7 @@ Filesystems at a Glance
      - By request
      - N/A
      - No
+
 
 /home/
 =======
