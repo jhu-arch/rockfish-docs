@@ -16,66 +16,82 @@ The Advanced Research Computing at Hopkins (  :guilabel:`ARCH` ) — formerly kn
    :maxdepth: 2
    :caption: About ARCH
 
-   About_ARCH
+   1_About_ARCH/About_ARCH
+   1_About_ARCH/RF_Citizen
 
 .. toctree::
    :maxdepth: 2
    :caption: Resources on Rockfish
 
-   HPC_Terminology
-   Allocation
-   Compute_Resources
-   Filesystems
+   2_Resources/ARCH_Terminology
+   2_Resources/Allocation
+   2_Resources/Compute_Resources
+   2_Resources/Filesystems
 
 .. toctree::
    :maxdepth: 2
-   :caption: Connect and Transfer to Rockfish
+   :caption: Navigating Rockfish
 
-   Connecting_to_Rockfish
-   File_Transfers
+   3_Navigating/Connecting_to_Rockfish
+   3_Navigating/File_Transfers
+   3_Navigating/Bash_Quickstart
+   3_Navigating/Managing_Group_Permissions
 
 .. toctree::
    :maxdepth: 2
-   :caption: Manage Software and Jobs
+   :caption: Slurm
 
-   Slurm
-   Job_Status
-   Software
+   4_Slurm/Slurm
+   4_Slurm/Partitions
+   4_Slurm/Job_Submission
+   4_Slurm/Example_Sbatch
+   4_Slurm/Priority
+   4_Slurm/Job_Status
+   4_Slurm/GPU_Jobs
 
 .. toctree::
    :maxdepth: 2
    :caption: Common Tasks and Workflows
 
-   OpenOnDemand
-   RStudioServer
-   JupyterLab
-   Parallel
-   Rpackages
+   5_Common_Tasks/Software
+   5_Common_Tasks/OpenOnDemand
+   5_Common_Tasks/JupyterLab
+   5_Common_Tasks/Parallel
+   5_Common_Tasks/Rpackages
 
 .. toctree::
    :maxdepth: 2
    :caption: How to do Reproducible Research
 
-   RF
-   Snakemake
-   Singularity
-   Virtual
-   Shorts
+   6_Reproducible/RF
+   6_Reproducible/Snakemake
+   6_Reproducible/Singularity
+   6_Reproducible/Virtual
+   6_Reproducible/Shorts
 
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
 
-   Bash_Quickstart
-   Managing_Group_Permissions
+   7_Tutorials/Tutorial_Conda_Envs
+   7_Tutorials/Tutorial_alphafold3
+   7_Tutorials/Tutorial_aspera_cli
+   7_Tutorials/Tutorial_JobDependencies
+   7_Tutorials/Tutorial_jupyter
+   7_Tutorials/Tutorial_Matlab_ParallelServer
+   7_Tutorials/Tutorial_Nextflow
+   7_Tutorials/Tutorial_Python_Venv
+   7_Tutorials/Tutorial_Rstudio 
+   7_Tutorials/Tutorial_vscode
 
 .. toctree::
    :maxdepth: 2
    :caption: Support and Help
 
-   Support
-   FAQ
-   Service_Level_Expectations
+   8_Support/Citing_Arch
+   8_Support/Support
+   8_Support/FAQ
+   8_Support/Service_Level_Expectations
 
 .. |pic1| image:: images/NSF.png
    :alt: NSF
