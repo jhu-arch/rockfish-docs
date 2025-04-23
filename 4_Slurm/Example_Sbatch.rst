@@ -93,6 +93,7 @@ GPU Job Script (NAMD, 4 GPUs)
    #SBATCH --job-name=namd4gpu
    #SBATCH --time=48:00:00
    #SBATCH --partition=a100
+   #SBATCH --qos=qos_gpu
    #SBATCH --nodes=1
    #SBATCH --ntasks-per-node=48
    ####SBATCH --mem-per-cpu=4G

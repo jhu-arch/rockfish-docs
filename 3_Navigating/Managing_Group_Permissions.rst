@@ -93,7 +93,7 @@ Example:
 Default Group on Login
 **********************
 
-Your default group (first in the `groups` output) is used each time you log in. If this group is outdated or not associated with your current work, contact `help@rockfish.jhu.edu` to request a change.
+Your default group (first in the `groups` output) is used each time you log in. If this group is outdated or not associated with your current work, contact `help@rockfish.jhu.edu <mailto:help@rockfish.jhu.edu>`__ to request a change.
 
 Group Permissions and Quotas
 *****************************

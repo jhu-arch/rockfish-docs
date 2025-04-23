@@ -68,7 +68,7 @@ Usage Policy
 - Run compute-heavy applications only on compute nodes, via Slurm
 - Never bypass the Slurm resource manager to access compute nodes directly
 - Comply with U.S. export control regulations and license obligations as required
-- Data subject to restrictions such as HIPAA or PHI is not permitted on Rockfish. If your research involves an IRB and the data is de-identified, please reach out to help@rockfish.jhu.edu for further guidance.
+- Data subject to restrictions such as HIPAA or PHI is not permitted on Rockfish. If your research involves an IRB and the data is de-identified, please reach out to `help@rockfish.jhu.edu <mailto:help@rockfish.jhu.edu>`__  for further guidance.
 
 
 

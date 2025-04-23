@@ -24,6 +24,7 @@ The Advanced Research Computing at Hopkins (  :guilabel:`ARCH` ) — formerly kn
    :caption: Resources on Rockfish
 
    2_Resources/ARCH_Terminology
+   2_Resources/RF_Quickstart
    2_Resources/Allocation
    2_Resources/Compute_Resources
    2_Resources/Filesystems
@@ -46,52 +47,46 @@ The Advanced Research Computing at Hopkins (  :guilabel:`ARCH` ) — formerly kn
    4_Slurm/Job_Submission
    4_Slurm/Example_Sbatch
    4_Slurm/Priority
+   4_Slurm/Usage
    4_Slurm/Job_Status
    4_Slurm/GPU_Jobs
 
 .. toctree::
    :maxdepth: 2
-   :caption: Common Tasks and Workflows
-
-   5_Common_Tasks/Software
-   5_Common_Tasks/OpenOnDemand
-   5_Common_Tasks/JupyterLab
-   5_Common_Tasks/Parallel
-   5_Common_Tasks/Rpackages
-
-.. toctree::
-   :maxdepth: 2
    :caption: How to do Reproducible Research
 
-   6_Reproducible/RF
-   6_Reproducible/Snakemake
-   6_Reproducible/Singularity
-   6_Reproducible/Virtual
-   6_Reproducible/Shorts
+   5_Reproducible/RF
+   5_Reproducible/Snakemake
+   5_Reproducible/Singularity
+   5_Reproducible/Virtual
+   5_Reproducible/Shorts
 
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
 
-   7_Tutorials/Tutorial_Conda_Envs
-   7_Tutorials/Tutorial_alphafold3
-   7_Tutorials/Tutorial_aspera_cli
-   7_Tutorials/Tutorial_JobDependencies
-   7_Tutorials/Tutorial_jupyter
-   7_Tutorials/Tutorial_Matlab_ParallelServer
-   7_Tutorials/Tutorial_Nextflow
-   7_Tutorials/Tutorial_Python_Venv
-   7_Tutorials/Tutorial_Rstudio 
-   7_Tutorials/Tutorial_vscode
+   6_Tutorials/Tutorial_Conda_Envs
+   6_Tutorials/Tutorial_alphafold3
+   6_Tutorials/Tutorial_aspera_cli
+   6_Tutorials/Tutorial_JobDependencies
+   6_Tutorials/Tutorial_Jupyter
+   6_Tutorials/Tutorial_Matlab_ParallelServer
+   6_Tutorials/Tutorial_Nextflow
+   6_Tutorials/Tutorial_OpenOnDemand
+   6_Tutorials/Tutorial_Parallel
+   6_Tutorials/Tutorial_Python_Venv
+   6_Tutorials/Tutorial_R 
+   6_Tutorials/Tutorial_Software
+   6_Tutorials/Tutorial_vscode
 
 .. toctree::
    :maxdepth: 2
    :caption: Support and Help
 
-   8_Support/Citing_Arch
-   8_Support/Support
-   8_Support/FAQ
-   8_Support/Service_Level_Expectations
+   7_Support/Citing_Arch
+   7_Support/Support
+   7_Support/FAQ
+   7_Support/Service_Level_Expectations
 
 .. |pic1| image:: images/NSF.png
    :alt: NSF
